@@ -18,6 +18,9 @@ if (!defined('QA_VERSION')) { // don't allow this page to be requested directly 
 	exit;
 }
 
+// overrides
+qa_register_plugin_overrides('qa-hidden-restriction-overrides.php');
+
 /*
 	Omit PHP closing tag to help avoid accidental output
 */

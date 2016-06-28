@@ -1,1 +1,1 @@
-"# q2a-hidden-restriction"
+# q2a-hidden-restriction

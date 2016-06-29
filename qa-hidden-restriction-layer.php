@@ -16,8 +16,9 @@ class qa_html_theme_layer extends qa_html_theme_base
 
 			if(hidden_restriction::passed_for_24_hours($created) ||
 				$acount > 0) {
-				$button = array( 'tags' => 'name="a_'.$postid .
-				 '" onclick="return false"',
+				$button = array( 'name="a'.$q_view['raw']['postid'] .
+				 '" onclick="location.href=\'' . '/使-い-方#hidden' .
+				 '\';return false"',
 								 'label' => qa_lang_html('qa_hidden_restrictioin_lang/button_value'),
 								 'popup' => qa_lang_html('qa_hidden_restrictioin_lang/popup'));
 				$q_view['form']['buttons']['hide'] = $button;

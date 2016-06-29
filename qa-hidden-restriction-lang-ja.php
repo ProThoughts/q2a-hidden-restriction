@@ -12,9 +12,9 @@
 */
 
 	return array(
-		// default
-		'button_value' => "Can't hide",
-		'popup' => "Why can not hide?",
+		// Japanese
+		'button_value' => "非表示不可(詳細)",
+		'popup' => "詳細を見る",
 	);
 
 

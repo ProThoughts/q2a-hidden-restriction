@@ -18,8 +18,12 @@ if (!defined('QA_VERSION')) { // don't allow this page to be requested directly 
 	exit;
 }
 
+// language file
+qa_register_plugin_phrases('qa-hidden-restriction-lang-*.php', 'qa_hidden_restrictioin_lang');
 // overrides
 qa_register_plugin_overrides('qa-hidden-restriction-overrides.php');
+// layer
+qa_register_plugin_layer('qa-hidden-restriction-layer.php', 'Hidden Restriction Layer');
 
 /*
 	Omit PHP closing tag to help avoid accidental output

@@ -27,4 +27,23 @@ class qa_html_theme_layer extends qa_html_theme_base
 
 	}
 
+	public function head_script()
+	{
+		qa_html_theme_base::head_script();
+		$script = "
+<script type='text/javascript'>
+$(document).ready(function(){
+	$('input[name=\"q_dohide\"]').click(function(){
+		$('#null').hide();
+		if (confirm('". qa_lang_html('qa_hidden_restrictioin_lang/hideconfirm') ."')) {
+			$('#null').show();
+		} else {
+			return false;
+		}
+	});
+});
+</script>
+";
+		$this->output($script);
+	}
 }

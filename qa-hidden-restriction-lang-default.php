@@ -15,6 +15,7 @@
 		// default
 		'button_value' => "Can't hide",
 		'popup' => "Why can not hide?",
+		'hideconfirm' => "Is it made hidden? There may be a person going to contribute a response, too.",
 	);
 
 

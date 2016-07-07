@@ -45,4 +45,34 @@ class hidden_restriction
 		return false;
 	}
 
+	public static function has_comment($postid)
+	{
+		if (!isset($postid)) {
+			return false;
+		}
+		$sql = "SELECT count(*) FROM ^posts WHERE type = 'C' AND parentid = #";
+		$result = qa_db_read_one_value(qa_db_query_sub($sql, $postid));
+
+		if ($result > 0) {
+			return true;
+		}
+
+		return false;
+	}
+
+	public static function is_best_answer($postid)
+	{
+		if (!isset($postid)) {
+			return false;
+		}
+		$sql = "SELECT count(*) FROM ^posts WHERE type = 'Q' AND selchildid = #";
+		$result = qa_db_read_one_value(qa_db_query_sub($sql, $postid));
+
+		if ($result > 0) {
+			return true;
+		}
+
+		return false;
+	}
+
 }

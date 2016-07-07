@@ -7,6 +7,7 @@ class qa_html_theme_layer extends qa_html_theme_base
 	public function q_view_buttons($q_view)
 	{
 		if ($this->template == 'question' &&
+			qa_get_logged_in_level() < QA_USER_LEVEL_ADMIN &&
 			isset($q_view['form']['buttons']['hide']) &&
 			!empty($q_view['form']['buttons']['hide'])) {
 
